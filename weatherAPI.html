@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weatherAPI.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <h1>WEATHER APP</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather> Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            <!-- grant location -->
+            <div class="sub-container grant-location-container">
+                <img src="download.jpg" alt="" width="80" height="80" loading="lazy">
+                <p>grant Location Access</p>
+                <p>Allow Access to get weather Information </p>
+                <button class="btn" data-grantAccess>Grant Access </button>
+            </div>
+
+            <!-- search form -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="search for city..." data-searchInput>
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <!-- loading container -->
+            <div class="sub-container loading-container">
+                <img src="loading.jpg" alt="" width="120" height="150">
+                <p>Loading</p>
+            </div>
+
+            <!-- show weather Info -->
+            <div class="sub-container user-info-container">
+
+                <!-- name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img src="flag.jpg" alt="" data-countryIcon>
+                </div>
+                <!-- discription -->
+                <p data-weatherDesc></p>
+                <!-- icon -->
+                <img src="" alt="" data-weatherIcon>
+                <!-- temp -->
+                <p data-temp></p>
+
+                <!-- 3div -->
+                <div class="parameter-container">
+                    <!-- card1 -->
+                    <div class="parameter">
+                        <img src="windspeed.png" alt="">
+                        <p>Windspeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card2S -->
+                    <div class="parameter">
+                        <img src="humidity.jpg" alt="">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card3 -->
+                    <div class="parameter">
+                        <img src="cloud.jpg" alt="">
+                        <p>clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="weatherAPI.js"></script>
+    <script src="https://kit.fontawesome.com/c482f09d14.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
